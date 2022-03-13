@@ -1,10 +1,15 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(TddByExample CXX)
+project(
+  TddByExample
+  VERSION 1.0
+  DESCRIPTON "Project based on K.Beck book"
+  LANGUAGES CXX
+)
 
 add_subdirectory(src)
 
-option(PACKAGE_TESTS "Build the tests" OFF)
+option(PACKAGE_TESTS "Build the tests" PROJECT_NAME STREQUAL CMAKE_PROJECT_NAME)
 if(PACKAGE_TESTS)
     enable_testing()
     include(GoogleTest)
