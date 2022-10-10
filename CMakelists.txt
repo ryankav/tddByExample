@@ -40,6 +40,5 @@ if(PACKAGE_TESTS)
 
 endif()
 
-
 add_subdirectory(src)
 
