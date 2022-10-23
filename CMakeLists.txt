@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.11..3.24)
 project(
   TddByExample
   VERSION 1.0
-  DESCRIPTON "Project based on K.Beck book"
+  DESCRIPTION "Project based on K.Beck book"
   LANGUAGES CXX
 )
 
