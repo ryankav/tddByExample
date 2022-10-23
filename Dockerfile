@@ -4,12 +4,14 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-rec
     build-essential \
     clang \
     cmake \
-    gdb
+    gdb \
+    git \
+    vim
 
 RUN useradd -ms /bin/bash tdd
 USER tdd
 WORKDIR /home/tdd
 
-COPY . .
+COPY --chown=tdd . .
 
 ENTRYPOINT ["/bin/bash"]
