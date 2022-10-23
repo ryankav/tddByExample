@@ -1,1 +1,1 @@
-add_subdiretory(project1)
+add_subdirectory(project1)

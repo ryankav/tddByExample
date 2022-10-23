@@ -2,6 +2,7 @@ FROM ubuntu@sha256:8ae9bafbb64f63a50caab98fd3a5e37b3eb837a3e0780b78e5218e6319396
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends install \
     build-essential \
+    ca-certificates \
     clang \
     cmake \
     gdb \
@@ -10,7 +11,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-rec
 
 RUN useradd -ms /bin/bash tdd
 USER tdd
-WORKDIR /home/tdd
+WORKDIR /home/tdd/project
 
 COPY --chown=tdd . .
 

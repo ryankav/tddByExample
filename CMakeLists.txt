@@ -13,19 +13,19 @@ if(${CMAKE_VERSION} VERSION_LESS 3.14)
   include(cmake/add_FetchContent_MakeAvailable.cmake)
 endif()
 
-if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+#if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
   
   #TODO: Look into what the difference of below is
   #ensure that -std=c++xx instead of -std=g++xx
 
-  set(CMAKE_CXX_EXTENSIONS OFF)
+  #  set(CMAKE_CXX_EXTENSIONS OFF)
 
   #support folders in IDEs
-  set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+  #set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-endif()
+  #endif()
 
-option(PACKAGE_TESTS "Build the tests" PROJECT_NAME STREQUAL CMAKE_PROJECT_NAME)
+option(PACKAGE_TESTS "Build the tests" ON)
 
 if(PACKAGE_TESTS)
   include(CTest)
