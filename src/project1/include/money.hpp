@@ -2,7 +2,7 @@
 #define PROJECT1_MONEY_H
 class Dollar {
   public:
-    int amount;
+    int amount = 10;
 
     Dollar(int) {};
 
