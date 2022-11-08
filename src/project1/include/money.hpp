@@ -4,6 +4,7 @@ class Dollar {
   public:
     int amount;
 
+    Dollar() = default;
     Dollar(int amount): amount(amount) {}
 
     void times(int mult) {
