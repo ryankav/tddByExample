@@ -2,11 +2,13 @@
 #define PROJECT1_MONEY_H
 class Dollar {
   public:
-    int amount = 10;
+    int amount;
 
-    Dollar(int) {};
+    Dollar(int amount): amount(amount) {}
 
-    void times(int) {};
+    void times(int mult) {
+      amount *= 2;
+    }
 };
 
 #endif
