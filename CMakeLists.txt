@@ -28,8 +28,6 @@ endif()
 option(PACKAGE_TESTS "Build the tests" ON)
 
 if(PACKAGE_TESTS)
-  include(CTest)
-
   FetchContent_Declare(
     Catch2
     GIT_REPOSITORY https://github.com/catchorg/Catch2.git
@@ -38,6 +36,10 @@ if(PACKAGE_TESTS)
 
   FetchContent_MakeAvailable(Catch2)
 
+  list(APPEND CMAKE_MODULE_PATH ${catch2_SOURCE_DIR}/extras)
+
+  include(CTest)
+  include(Catch)
 endif()
 
 add_subdirectory(src)
