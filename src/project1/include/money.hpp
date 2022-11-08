@@ -7,7 +7,7 @@ class Dollar {
     Dollar(int amount): amount(amount) {}
 
     void times(int mult) {
-      amount *= 2;
+      amount *= mult;
     }
 };
 
